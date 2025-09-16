@@ -15,7 +15,7 @@ connectDB();
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://medtrack-8oj5.onrender.com",
+    origin: "https://medtrack-seven.vercel.app",
     credentials: true,
   })
 );
