@@ -12,11 +12,14 @@ function Signup({ onSignup }) {
   async function handleSubmit(e) {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/signup", {
-        username,
-        email,
-        password,
-      });
+      const res = await axios.post(
+        "https://medtrack-8oj5.onrender.com/api/auth/signup",
+        {
+          username,
+          email,
+          password,
+        }
+      );
       onSignup(res.data);
       console.log("✅ Signup success:", res.data);
       navigate("/login")

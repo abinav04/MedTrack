@@ -202,7 +202,7 @@ export default function Records({ user, onLogout }) {
             >
               {viewingRecord.imageUrl && (
                 <img
-                  src={`http://localhost:5000${viewingRecord.imageUrl}`}
+                  src={`https://medtrack-8oj5.onrender.com${viewingRecord.imageUrl}`}
                   alt={viewingRecord.title}
                   className="detail-image"
                 />

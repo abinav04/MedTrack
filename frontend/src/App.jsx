@@ -21,7 +21,7 @@ function App() {
   useEffect(() => {
     if (token) {
       axios
-        .get("http://localhost:5000/api/auth/me", {
+        .get("https://medtrack-8oj5.onrender.com/api/auth/me", {
           headers: { Authorization: `Bearer ${token}` },
           withCredentials: true,
         })

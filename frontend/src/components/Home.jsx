@@ -15,9 +15,13 @@ export default function Home({ user,onLogout,token }) {
       formData.append("description", description);
       if (image) formData.append("image", image);
 
-      await axios.post("http://localhost:5000/api/records", formData, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
+      await axios.post(
+        "https://medtrack-8oj5.onrender.com/api/records",
+        formData,
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      );
 
       alert("Record added successfully!");
       setTitle("");
