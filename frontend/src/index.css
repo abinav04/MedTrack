@@ -1,0 +1,147 @@
+/* General */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f6f8;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2c3e50; /* dark professional blue-gray */
+  padding: 12px 25px;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Brand */
+.brand {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Links */
+.nav-links a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: #ecf0f1;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #1abc9c; /* teal hover */
+}
+
+/* Right side (username + button) */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Username styling */
+.user-name {
+  background-color: #34495e; /* softer box behind name */
+  color: #ecf0f1;
+  padding: 6px 14px;
+  border-radius: 6px;   /* subtle, not pill-shaped */
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Logout button */
+.btn {
+  background-color: #e74c3c; /* red */
+  color: white;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 6px;   /* small curve */
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+
+
+/* Home (Form) */
+.home-container {
+  margin: 30px auto;
+  width: 90%;
+  max-width: 500px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.record-form input,
+.record-form textarea,
+.record-form button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.record-form button {
+  background: #2b6777;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.record-form button:hover {
+  background: #1d4f57;
+}
+
+/* Records Page */
+.records-container {
+  padding: 20px;
+}
+
+.record-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.record-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.record-card img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.record-card h3 {
+  margin: 8px 0;
+}
+
+.view-btn {
+  display: inline-block;
+  padding: 6px 12px;
+  background: #2b6777;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.view-btn:hover {
+  background: #1d4f57;
+}
