@@ -2,10 +2,11 @@ import Record from "../models/Record.js";
 
 export const createRecord = async (req,res)=>{
     try{
+        const fileUrl = req.file ? req.file.path : null;
         const newRecord = new Record({
             title:req.body.title,
             description:req.body.description,
-            imageUrl:req.file ? `/uploads/${req.file.filename}` : null,
+            imageUrl: fileUrl,
             user:req.user,
         });
         await newRecord.save();
@@ -43,7 +44,7 @@ export const updateRecord = async (req,res)=>{
             title: req.body.title,
             description: req.body.description,
         };
-        if (req.file) updatedData.imageUrl = `/uploads/${req.file.filename}`;
+        if (req.file) updatedData.imageUrl =  req.file.path;
         const updated = await Record.findByIdAndUpdate(req.params.id,updatedData,{new:true});
         res.json(updated);
     }catch(e){
