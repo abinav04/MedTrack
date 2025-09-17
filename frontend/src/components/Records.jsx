@@ -20,9 +20,12 @@ export default function Records({ user, onLogout }) {
 
   const fetchRecords = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/records", {
-        headers: { Authorization: `Bearer ${token}` },
-      });
+      const res = await axios.get(
+        "https://medtrack-8oj5.onrender.com/api/records",
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      );
       if (Array.isArray(res.data)) setRecords(res.data);
       else if (Array.isArray(res.data.records)) setRecords(res.data.records);
       else setRecords([]);
@@ -58,7 +61,7 @@ export default function Records({ user, onLogout }) {
       if (selectedImage) form.append("image", selectedImage);
 
       const res = await axios.put(
-        `http://localhost:5000/api/records/${editingRecord._id}`,
+        `https://medtrack-8oj5.onrender.com/records/${editingRecord._id}`,
         form,
         {
           headers: {
@@ -83,9 +86,12 @@ export default function Records({ user, onLogout }) {
     if (!confirmDelete) return;
 
     try {
-      await axios.delete(`http://localhost:5000/api/records/${id}`, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
+      await axios.delete(
+        `https://medtrack-8oj5.onrender.com/api/records/${id}`,
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      );
       setRecords(records.filter((r) => r._id !== id));
     } catch (err) {
       console.error(err);
@@ -115,7 +121,7 @@ export default function Records({ user, onLogout }) {
               <div className="record-card" key={record._id}>
                 {record.imageUrl && (
                   <img
-                    src={`http://localhost:5000${record.imageUrl}`}
+                    src={`https://medtrack-8oj5.onrender.com${record.imageUrl}`}
                     alt={record.title}
                     style={{ cursor: "pointer" }}
                     onClick={() => setViewingRecord(record)}
