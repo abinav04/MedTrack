@@ -11,6 +11,7 @@ export default function Records({ user, onLogout }) {
   const [viewingRecord, setViewingRecord] = useState(null);
   const [formData, setFormData] = useState({ title: "", description: "" });
   const [selectedImage, setSelectedImage] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const token = Cookies.get("token");
 
@@ -40,6 +41,7 @@ export default function Records({ user, onLogout }) {
     setEditingRecord(record);
     setFormData({ title: record.title, description: record.description });
     setSelectedImage(null);
+    setIsModalOpen(true);
   };
 
   // Cancel editing
@@ -47,6 +49,7 @@ export default function Records({ user, onLogout }) {
     setEditingRecord(null);
     setFormData({ title: "", description: "" });
     setSelectedImage(null);
+    setIsModalOpen(false);
   };
 
   // Update record with confirmation and file upload
@@ -208,7 +211,7 @@ export default function Records({ user, onLogout }) {
             >
               {viewingRecord.imageUrl && (
                 <img
-                  src={`https://medtrack-8oj5.onrender.com${viewingRecord.imageUrl}`}
+                  src={viewingRecord.imageUrl}
                   alt={viewingRecord.title}
                   className="detail-image"
                 />
