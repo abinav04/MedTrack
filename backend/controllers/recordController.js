@@ -24,6 +24,7 @@ export const getRecords = async (req,res)=>{
       const records = await Record.find(query);
       res.json(records);
     }catch(e){
+          console.error("Error in getRecords:", e.message);
         res.status(500).json({message:e.message});
     }
 }
