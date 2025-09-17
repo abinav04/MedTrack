@@ -64,7 +64,7 @@ export default function Records({ user, onLogout }) {
       if (selectedImage) form.append("image", selectedImage);
 
       const res = await axios.put(
-        `https://medtrack-8oj5.onrender.com/records/${editingRecord._id}`,
+        `https://medtrack-8oj5.onrender.com/api/records/${editingRecord._id}`,
         form,
         {
           headers: {
