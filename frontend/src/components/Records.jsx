@@ -121,7 +121,7 @@ export default function Records({ user, onLogout }) {
               <div className="record-card" key={record._id}>
                 {record.imageUrl && (
                   <img
-                    src={`https://medtrack-8oj5.onrender.com${record.imageUrl}`}
+                    src={record.imageUrl}
                     alt={record.title}
                     style={{ cursor: "pointer" }}
                     onClick={() => setViewingRecord(record)}
