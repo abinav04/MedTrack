@@ -10,18 +10,39 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #2c3e50; /* dark professional blue-gray */
+  background-color: #2c3e50;
   padding: 12px 25px;
   color: white;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
+
+/* Left section (logo + brand) */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Center section (links) */
+.nav-center {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Right section (username + button) */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 /* Logo */
 .logo {
   height: 40px;
   width: 40px;
-  border-radius: 8px; /* slight rounding */
-  margin-right: 15px;
+  border-radius: 8px;
 }
 
 /* Brand */
@@ -29,45 +50,38 @@ body {
   font-size: 22px;
   font-weight: 700;
   letter-spacing: 1px;
+  color: white;
 }
 
 /* Links */
-.nav-links a {
-  margin: 0 12px;
+.nav-center a {
   text-decoration: none;
   color: #ecf0f1;
   font-weight: 500;
   transition: color 0.3s;
 }
 
-.nav-links a:hover {
-  color: #1abc9c; /* teal hover */
-}
-
-/* Right side (username + button) */
-.nav-actions {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+.nav-center a:hover {
+  color: #1abc9c;
 }
 
 /* Username styling */
 .user-name {
-  background-color: #34495e; /* softer box behind name */
-  color: #ecf0f1;
+  background-color: #2ecc71;
+  color: #fff;
   padding: 6px 14px;
-  border-radius: 6px;   /* subtle, not pill-shaped */
+  border-radius: 6px;
   font-size: 14px;
   font-weight: 500;
 }
 
 /* Logout button */
 .btn {
-  background-color: #e74c3c; /* red */
+  background-color: #e74c3c;
   color: white;
   border: none;
   padding: 7px 14px;
-  border-radius: 6px;   /* small curve */
+  border-radius: 6px;
   font-weight: 500;
   cursor: pointer;
   transition: background 0.3s, transform 0.2s;
