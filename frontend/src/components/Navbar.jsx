@@ -1,12 +1,10 @@
-import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-
-export default function Navbar({ user, onSearch, onLogout }) {
-  const [query, setQuery] = useState("");
+export default function Navbar({ user, onLogout }) {
 
   return (
     <nav className="navbar">
+      <img src="https://i.pinimg.com/1200x/f1/42/af/f142afb507415c1c4094bf28e9061a54.jpg" />
       <div className="brand">Med Track</div>
       <div className="nav-links">
         <Link to="/">Home</Link>
